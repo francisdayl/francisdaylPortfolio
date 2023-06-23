@@ -2,3 +2,44 @@
     color:rgba(255, 255, 255, 0.504);
 
 } */
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+@keyframes spinBootstrap {
+  0% { transform: rotate(0deg)}
+  25%{transform: rotate(15deg)}
+  50%{transform: rotate(0deg)}
+  75%{transform: rotate(-15deg)}
+  100%{transform: rotate(0deg)}
+}
+
+@keyframes htmlJump {
+  0% {translate: 0px 0px }
+  50% {translate: 0px -85px }
+  51% {translate: 0px 85px }
+  100%{translate:0px 0px}
+}
+
+@keyframes cssMove{
+  0% {translate: 0px 0px }
+  50% {translate: 85px 0px }
+  51% {translate: -85px 0px }
+  100%{translate:0px 0px}
+}
+
+#reactA:hover {
+animation: spin 3s infinite linear;
+}
+
+
+#bootstrapA:hover{
+  animation: spinBootstrap 0.25s infinite linear;
+}
+.animateHtml{
+  animation: htmlJump 1s infinite linear;
+}
+.animateCSS{
+  animation: cssMove 1s infinite linear;
+}

@@ -1,7 +1,5 @@
-
-
 const ANIMATION_FOLDER = 'assets/animations/'
-
+const LIST_ANIMATIONS = ['pythonA','figmaA','gitA','typescriptA','angularA','postgreA']
 
 
 const burgerButton = document.getElementById('burger-menu')
@@ -11,76 +9,96 @@ burgerButton.addEventListener('click', ()=>{
     navOptions.classList.toggle('hidden')
 })
 
-const lienzo = document.getElementById('test')
 
 
-document.addEventListener('keypress',(e)=>{
-    let val_random = parseInt(Math.random()*256)
-    let last_class = lienzo.classList[lienzo.classList.length-1]
-    lienzo.classList.remove(last_class)
-    lienzo.classList.add(`bg-[rgb(0,0,${val_random})]`)
-    // lienzo.classList.remove(lienzo.classList.at(-1))
-    console.log()
-})
-
-
-
-new rive.Rive({
-    src: `${ANIMATION_FOLDER}pythonA.riv`,
-    // Or the path to a public Rive asset
-    // src: '/public/example.riv',
-    canvas: document.getElementById("canvasPY"),
-    autoplay: true,
-    stateMachines: "Animation",
-});
-
-
-
-
-
-for(let i=2; i<20;i++){
+for(let a_name of LIST_ANIMATIONS){
     new rive.Rive({
-        src: "assets/animations/pythonA.riv",
-        // Or the path to a public Rive asset
-        // src: '/public/example.riv',
-        canvas: document.getElementById(`canvasPY${i}`),
+        src: `${ANIMATION_FOLDER}${a_name}.riv`,
+        canvas: document.getElementById(`${a_name}`),
         autoplay: true,
         stateMachines: "Animation",
     });
 }
 
-// new rive.Rive({
-//     src: "assets/pythona.riv",
-//     // Or the path to a public Rive asset
-//     // src: '/public/example.riv',
-//     canvas: document.getElementById("canvasPY2"),
-//     autoplay: true,
-//     stateMachines: "Animation",
-// });
 
-// new rive.Rive({
-//     src: "assets/pythona.riv",
-//     // Or the path to a public Rive asset
-//     // src: '/public/example.riv',
-//     canvas: document.getElementById("canvasPY3"),
-//     autoplay: true,
-//     stateMachines: "Animation",
-// });
+const subir = document.getElementById('arrowUp')
+const bajar = document.getElementById('arrowDown')
+const CARRUSEL = document.getElementById('carrusel')
 
-// new rive.Rive({
-//     src: "assets/pythona.riv",
-//     // Or the path to a public Rive asset
-//     // src: '/public/example.riv',
-//     canvas: document.getElementById("canvasPY4"),
-//     autoplay: true,
-//     stateMachines: "Animation",
-// });
+var subida ;
+var bajada ;
+//SUBIDA
 
-// new rive.Rive({
-//     src: "assets/pythona.riv",
-//     // Or the path to a public Rive asset
-//     // src: '/public/example.riv',
-//     canvas: document.getElementById("canvasPY"),
-//     autoplay: true,
-//     stateMachines: "Animation",
-// });
+//BAJADA
+subir.addEventListener('mouseenter', ()=>{
+    clearInterval(bajada)
+    bajada = setInterval(()=>{
+        CARRUSEL.scrollBy(0,-10)
+    },100)
+    }
+)
+subir.addEventListener('mousedown', ()=>{
+    clearInterval(bajada)
+    bajada = setInterval(()=>{
+        CARRUSEL.scrollBy(0,-10)
+    },100)
+    }
+)
+subir.addEventListener('mouseup', ()=>{
+    clearInterval(bajada)
+    }
+)
+subir.addEventListener('mouseleave', ()=>{
+    clearInterval(bajada)
+    }
+)
+//SUBIDA
+bajar.addEventListener('mouseenter', ()=>{
+    clearInterval(subida)
+    subida = setInterval(()=>{
+        CARRUSEL.scrollBy(0,10)
+    },100)
+    }
+)
+bajar.addEventListener('mousedown', ()=>{
+    clearInterval(subida)
+    subida = setInterval(()=>{
+        CARRUSEL.scrollBy(0,10)
+    },100)
+    }
+)
+bajar.addEventListener('mouseup', ()=>{
+    clearInterval(subida)
+    }
+)
+bajar.addEventListener('mouseleave', ()=>{
+    clearInterval(subida)
+    }
+)
+
+const htmlAC = document.getElementById('htmlAC')
+
+htmlAC.addEventListener('mouseenter',()=>{
+    const htmlA = document.getElementById('htmlA')
+    htmlA.classList.toggle('animateHtml')
+
+})
+htmlAC.addEventListener('mouseleave',()=>{
+    const htmlA = document.getElementById('htmlA')
+    htmlA.classList.toggle('animateHtml')
+
+})
+
+const cssAC = document.getElementById('cssAC')
+cssAC.addEventListener('mouseenter',()=>{
+    const cssA = document.getElementById('cssA')
+    cssA.classList.toggle('animateCSS')
+
+})
+cssAC.addEventListener('mouseleave',()=>{
+    const cssA = document.getElementById('cssA')
+    cssA.classList.toggle('animateCSS')
+
+})
+
+

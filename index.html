@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Portafolio David Yanez">
+    <meta property="og:description" content="Hola este es mi Portafolio en el que muestro mis habilidades">
+    <meta property='og:image' content="https://i.kym-cdn.com/photos/images/newsfeed/002/239/756/ee4.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -99,44 +102,43 @@
   </section>
 
   <hr>
-  <section id="Habilidades" loading="lazy" class="h-[80vh] grid grid-rows-7 gap-10 pt-10">
+  <section id="Habilidades" loading="lazy" class="h-screen grid grid-rows-7 gap-10 pt-10">
     <div class="row-span-1 h-[20%] bg-pink self-center ">
       <h2 class="dark:text-white text-3xl text-center font-bold "> Mis Habilidades</h2>
     </div>
     <div class="row-span-6 h-full min-h-full flex flex-col gap-5 sm:px-20">
-      <div class="cursor-pointer hover:bg-[rgba(255,255,255,0.7)] py-5 w-full text-center">
-        Arriba
+      <div id="arrowUp" class="cursor-pointer hover:bg-[rgba(255,255,255,0.1)]  w-full flex justify-center rounded-lg">
+        <img src="assets/arrow.svg" alt="" class="h-5 w-auto text-center">
       </div>
       <div id="carrusel" 
-      class="h-1/2 w-full overflow-scroll grid grid-cols-3 sm:grid-cols-4 gap-5
-       justify-items-center ">
-        <canvas id="canvasPY"  width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
-        <canvas id="canvasPY2" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
-        <canvas id="canvasPY3" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
-        <canvas id="canvasPY4" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
+      class="h-2/3 w-full overflow-y-auto grid grid-cols-3 sm:grid-cols-4 gap-5
+       justify-items-center py-10 ">
+        <canvas id="pythonA"  width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
+        <img src="assets/javascript.svg"  alt="javascript" class="h-[85px] w-auto hover:cursor-pointer hover:animate-bounce" >
+        <canvas id="typescriptA"  width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
+        <img src="assets/nodejs.svg"      alt="nodejs"     class="h-[85px] w-auto hover:cursor-pointer hover:animate-ping" >
 
-        <canvas id="canvasPY5"  width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
-        <canvas id="canvasPY6" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
-        <canvas id="canvasPY7" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
-        <canvas id="canvasPY8" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
+        <img src="assets/java.svg" alt="java" class="h-[85px] w-auto hover:cursor-pointer" >
+        <img id="reactA" src="assets/react.svg" alt="react" class="h-[85px] w-auto hover:cursor-pointer">
+        <canvas id="angularA" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
+        <!-- <canvas id="dartA" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
+        <canvas id="Flutter" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas> -->
+        <div id="htmlAC" class="h-[85px] w-[85px] overflow-hidden  hover:cursor-pointer"><img id="htmlA" src="assets/html5.svg" alt="react" class="h-[85px] w-auto"></div>
+        <div id="cssAC" class="h-[85px] w-[85px] overflow-hidden   hover:cursor-pointer"><img id="cssA" src="assets/css.svg" alt="react" class="h-[85px] w-auto"></div>
+        <img id="bootstrapA" src="assets/bootstrap.svg" alt="bootstrap" class="h-[85px] w-auto hover:cursor-pointer after:bg-blue-700 "  > 
+        <div id="tailwindAP" class="h-[85px] w-[85px] overflow-hidden hover:cursor-pointer"><img id="tailwindA" src="assets/tailwind.svg" alt="react" class="h-[85px] w-auto"></div>
 
-        <canvas id="canvasPY9"  width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
-        <canvas id="canvasPY10" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
-        <canvas id="canvasPY11" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
-        <canvas id="canvasPY12" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
 
-        <canvas id="canvasPY13"  width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
-        <canvas id="canvasPY14" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
-        <canvas id="canvasPY15" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
-        <canvas id="canvasPY16" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
+        <canvas id="postgreA" width="85" height="85" class="object-cover hover:cursor-pointer bg-[#282A36] "></canvas>
+        <div id="mysqlAP" class="h-[85px] w-[85px] overflow-hidden   hover:cursor-pointer"><img id="mysqlA" src="assets/mysql.svg" alt="react" class="h-[85px] w-auto"></div>
+        <div id="mongoAP" class="h-[85px] w-[85px] overflow-hidden   hover:cursor-pointer"><img id="mongoA" src="assets/mongo.svg" alt="react" class="h-[85px] w-auto"></div>
 
-        <canvas id="canvasPY17"  width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
-        <canvas id="canvasPY18" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
-        <canvas id="canvasPY19" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
-        <canvas id="canvasPY20" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
+        <canvas id="gitA" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
+        <div id="riveAP" class="h-[85px] w-[85px] overflow-hidden   hover:cursor-pointer"><img id="riveA" src="assets/rive.svg" alt="react" class="h-[85px] w-auto"></div>
+        <canvas id="figmaA" width="85" height="85" class="object-cover hover:cursor-pointer"></canvas>
       </div>
-      <div class="cursor-pointer hover:bg-[rgba(255,255,255,0.3)] py-5 w-full text-center">
-        Abajo
+      <div id="arrowDown" class="cursor-pointer hover:bg-[rgba(255,255,255,0.1)]  w-full flex justify-center rounded-lg">
+        <img src="assets/arrow.svg" alt="" class="h-5 w-auto text-center origin-center rotate-180">
       </div>
     </div>
   </section>
