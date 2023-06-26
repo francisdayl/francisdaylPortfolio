@@ -1,7 +1,64 @@
-/* body{
-    color:rgba(255, 255, 255, 0.504);
+html{
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 30px;
+}
+section{
+  scroll-snap-align: start;
+}
 
-} */
+section:last-child{
+  scroll-snap-align: none;
+  scroll-snap-type: initial;
+}
+
+
+@keyframes typing {
+  0% , 9.09% { content: ""; }
+  9.09% , 18.18%{ content: ","; }
+  18.18% , 27.27% { content: ", "; }
+  27.27% , 36.36% { content: ", S"; }
+  36.36% , 45.45% { content: ", So"; }
+  45.45% , 54.54% { content: ", Soy"; }
+  54.54% , 63.63% { content: ", Soy "; }
+  63.63% , 72.72% { content: ", Soy D"; }
+  72.72% , 81.81% { content: ", Soy Da"; }
+  81.81% , 90.90% { content: ", Soy Dav"; }
+  90.90% , 95% { content: ", Soy Davi"; }
+  95%, 100% { content: ", Soy David"; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@media (prefers-color-scheme: dark) {
+  .typewriter::after {
+    content: "";
+    border-right: 1px solid white;
+    animation: blink 0.5s linear infinite;
+  }
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid black;
+  animation: blink 0.5s linear infinite;
+}
+
+
+
 
 @keyframes spin {
     to { transform: rotate(360deg); }
