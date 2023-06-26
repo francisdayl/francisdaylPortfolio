@@ -57,7 +57,9 @@ section:last-child{
   animation: blink 0.5s linear infinite;
 }
 
-
+footer{
+  color: rgb(60, 103, 230)
+}
 
 
 @keyframes spin {
