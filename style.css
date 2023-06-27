@@ -11,6 +11,26 @@ section:last-child{
   scroll-snap-type: initial;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c4c4c4; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #797979; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #676666; 
+}
 
 @keyframes typing {
   0% , 9.09% { content: ""; }
@@ -48,6 +68,26 @@ section:last-child{
     content: "";
     border-right: 1px solid white;
     animation: blink 0.5s linear infinite;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #555; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #292929; 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
   }
 }
 

@@ -1,7 +1,23 @@
+const toggle = document.getElementById("switchTheme");
+const theme = window.localStorage.getItem("theme");
+/* checks if the theme stored in localStorage is dark
+if yes apply the dark theme to the body */
+if (theme === "dark") document.body.classList.add("dark");
+
+// event listener stops when the change theme button is clicked
+toggle.addEventListener("click", () => {
+   document.body.classList.toggle("dark");
+   if (theme === "dark") {
+     window.localStorage.setItem("theme", "light");
+   } else window.localStorage.setItem("theme", "dark");
+});
+
+// refresh.addEventListener("click", () => {
+//    window.location.reload();
+// });
+
 const ANIMATION_FOLDER = 'assets/animations/'
 const LIST_ANIMATIONS = ['pythonA','figmaA','gitA','typescriptA','angularA','postgreA']
-
-
 const burgerButton = document.getElementById('burger-menu')
 const navOptions = document.getElementById('navbar-sticky')
 burgerButton.addEventListener('click', ()=>{
